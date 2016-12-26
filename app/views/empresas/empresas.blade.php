@@ -3,4 +3,6 @@
 ?>
 
 @extends("layouts.mainempresas")
+@section("content");
 
+@stop

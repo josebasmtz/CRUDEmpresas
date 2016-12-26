@@ -8,6 +8,6 @@ class EmpresasController extends \BaseController {
 	 * @return Response
 	 */
 	public function getIndex(){
-	    return \Illuminate\Support\Facades\View::make("empresas.empresas");
+	    return \Illuminate\Support\Facades\View::make("empresas.empresas")->with(Empresa::getEmpresas());
     }
 }
