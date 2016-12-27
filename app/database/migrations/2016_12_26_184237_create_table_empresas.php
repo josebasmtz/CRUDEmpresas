@@ -20,6 +20,7 @@ class CreateTableEmpresas extends Migration {
             $table->integer("trabajadores");
             $table->string("rfc",13);
             $table->boolean("estado")->default("1");
+            $table->timestamps();
         });
 	}
 
@@ -30,7 +31,7 @@ class CreateTableEmpresas extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop("tbl_empresas");
 	}
 
 }
