@@ -28,7 +28,7 @@
                         <td>{{($empresa->estado==1)?"Activo":"Inactivo";}}</td>
                         <td class="text-center">
                             <a href="{{url('empresas/editar')}}/{{$empresa->id}}" class="btn btn-warning">Editar</a>
-                            <a href="{{url('empresa/borrar')}}/" class="btn btn-danger">Eliminar</a>
+                            <a href="{{url('empresas/confirmareliminacion')}}/{{$empresa->id}}" class="btn btn-danger">Eliminar</a>
                         </td>
                     </tr>
                 @endforeach

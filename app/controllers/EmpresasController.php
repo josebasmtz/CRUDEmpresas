@@ -45,4 +45,8 @@ class EmpresasController extends \BaseController {
         $empresa->touch();
         return Redirect::to("empresas");
     }
+
+    public function getConfirmareliminacion($id){
+        return View::make("empresas.confirmarEliminacion")->with(["id"=>$id]);
+    }
 }
