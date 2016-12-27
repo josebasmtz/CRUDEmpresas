@@ -1,7 +1,3 @@
-<?php
-        $title = "Empresas";
-?>
-
 @extends("layouts.mainempresas")
 @section("content")
     <div class="container">

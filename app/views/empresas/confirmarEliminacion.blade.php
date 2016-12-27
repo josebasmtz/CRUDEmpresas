@@ -6,10 +6,10 @@
 @section("content")
     <div class="container">
         <div class="row">
-            <h1>¿En realidad desea borrar el registro?</h1>
+            <h1 class="text-center">¿En realidad desea borrar el registro?</h1>
         </div>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 col-md-offset-2">
                 <form action="{{url("empresas/eliminar")}}/{{$id}}" method="get">
                     <input type="submit" class="btn btn-danger btn-block" value="Si">
                 </form>

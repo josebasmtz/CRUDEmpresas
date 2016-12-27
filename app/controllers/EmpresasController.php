@@ -9,7 +9,7 @@ class EmpresasController extends \BaseController {
 	 */
 	public function getIndex(){
 	    $empresas = Empresa::all();
-	    return \Illuminate\Support\Facades\View::make("empresas.empresas")->with(["empresas"=>$empresas]);
+	    return \Illuminate\Support\Facades\View::make("empresas.empresas")->with(["title"=>"Empresas","empresas"=>$empresas]);
     }
     public function getAgregar(){
 	    return View::make("empresas.agregar")->with(["title"=>"Agregar"]);
@@ -48,5 +48,11 @@ class EmpresasController extends \BaseController {
 
     public function getConfirmareliminacion($id){
         return View::make("empresas.confirmarEliminacion")->with(["id"=>$id]);
+    }
+
+    public function getEliminar($id){
+        $empresa = Empresa::where("id","=", $id)->firstOrFail();
+        $empresa->delete();
+        return Redirect::to("empresas");
     }
 }
