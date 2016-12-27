@@ -55,4 +55,20 @@ class EmpresasController extends \BaseController {
         $empresa->delete();
         return Redirect::to("empresas");
     }
+
+    public function getActivas(){
+        $empresas = Empresa::where("estado","=",1)->get();
+        return View::make("empresas.empresas")->with(["title"=>"Empresas Activas", "empresas"=>$empresas]);
+    }
+
+    public function getInactivas(){
+        $empresas = Empresa::where("estado","=",0)->get();
+        return View::make("empresas.empresas")->with(["title"=>"Empresas Inactivas", "empresas"=>$empresas]);
+    }
+
+    public function getBuscar(){
+        $data = Input::all();
+        $empresas = Empresa::whereRaw("razon_social = ?",[$data['raz_soc']])->get();
+        return View::make("empresas.empresas")->with(["title"=>"Busqueda de Empresa", "empresas"=>$empresas]);
+    }
 }

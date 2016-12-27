@@ -11,7 +11,7 @@
             {{\Illuminate\Support\Facades\Form::open()}}
             <input type="text" name="nombre" class="form-control" placeholder="Nombre" value="{{$empresa->nombre}}">
             <input type="text" name="razon_social" class="form-control" placeholder="Razon Social" value="{{$empresa->razon_social}}">
-            <input type="datetime" name="fecha_creacion" class="form-control datepicker" placeholder="Fecha de Creacion" value="{{$empresa->fecha_creacion}}">
+            <input type="date" name="fecha_creacion" class="form-control datepicker" placeholder="Fecha de Creacion" value="{{$empresa->fecha_creacion}}">
             <input type="text" name="trabajadores" class="form-control" placeholder="N° Trabajadores" value="{{$empresa->trabajadores}}">
             <input type="text" name="rfc" class="form-control" placeholder="RFC" value="{{$empresa->rfc}}">
             <select name="estado">

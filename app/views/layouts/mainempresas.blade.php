@@ -25,14 +25,14 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li><a href="{{url('empresas/agregar')}}">Agregar</a></li>
-                        <li><a href="#">Activas <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">Inactivas</a></li>
+                        <li><a href="{{url('empresas/activas')}}">Activas</a></li>
+                        <li><a href="{{url("empresas/inactivas")}}">Inactivas</a></li>
                     </ul>
-                    <form class="navbar-form navbar-right">
+                    <form class="navbar-form navbar-right" action="{{url('empresas/buscar')}}">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search">
+                            <input type="text" class="form-control" placeholder="Buscar Razon Social" name="raz_soc">
                         </div>
-                        <a href="#" class="btn btn-default"><i class="fa fa-search"></i></a>
+                        <button class="btn btn-default"><i class="fa fa-search"></i></button>
                     </form>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->

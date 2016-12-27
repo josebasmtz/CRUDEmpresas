@@ -6,7 +6,7 @@
 
 @section("content")
     <div class="container">
-        <h1 class="text-center">Agregar Empresa</h1>
+        <h1 class="text-center">{{$title}}</h1>
         <section class="col-md-4 col-md-offset-4">
             {{\Illuminate\Support\Facades\Form::open()}}
                 <input type="text" name="nombre" class="form-control" placeholder="Nombre">

@@ -1,6 +1,7 @@
 @extends("layouts.mainempresas")
 @section("content")
     <div class="container">
+        <h1>{{$title}}</h1>
         <table class="table table-bordered">
             <thead>
                 <tr>
